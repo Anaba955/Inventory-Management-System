@@ -1,0 +1,97 @@
+
+
+{%load static%}
+<DOCTYPE html>
+<html>
+<head>
+    <title>Add New Item</title>
+    <link rel = "stylesheet" href="{%static 'myapp/add_item.css'%}">
+</head>
+<body>
+    <!-- add_item.html -->
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save</button>
+</form>
+
+    {% comment %} <div class="container">
+        <h1>Add a New Item</h1>
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="id">ID:</label>
+                <input type="text" id="id" name="id" required>
+            </div>
+            <div class="form-group">
+                <label for="id_name">Name:</label>
+                <input type="text" id="id_name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="id_box_id">Box ID:</label>
+                <input type="text" id="id_box_id" name="box_id" required>
+            </div>
+            <div class="form-group">
+                <label for="id_quantity">Quantity:</label>
+                <input type="number" id="id_quantity" name="quantity" min="1" required>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Add Item">
+            </div>
+        </form>
+    </div> {% endcomment %}
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% comment %} {% comment %} <!-- add_box.html -->
+{%load static%}
+<DOCTYPE html>
+<html>
+<head>
+    <title>Add New Item</title>
+    <link rel = "stylesheet" href="{%static 'myapp/add_item.css'%}">
+</head>
+<body> {% endcomment %}
+    {% comment %} <div class="container">
+        <h1>Add a New Item</h1>
+        <form method="POST" >
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="id">Id:</label>
+                <input type="text" id="id" name="id" required>
+            </div>
+            <div class="form-group">
+                <label for="id_name">Name:</label>
+                <input type="text" id="id_name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="id_rack_id">Box ID:</label>
+                <input type="text" id="id_rack_id" name="rack_id" required>
+            </div>
+            <div class="form-group">
+                <label for="id_quantity">Quantity:</label>
+                <input type="number" id="id_quantity" name="Qty" min="1" required>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Add Item">
+            </div>
+        </form>
+    </div> {% endcomment %}
+{% comment %} </body>
+</html> {% endcomment %}

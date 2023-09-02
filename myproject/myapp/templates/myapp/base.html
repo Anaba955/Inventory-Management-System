@@ -1,0 +1,53 @@
+{%load static%}
+<DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boxes</title>
+    <link rel="stylesheet" href="{%static 'myapp/rack1.css'%}">
+</head>
+
+<body>
+    <div class="main-content">
+        <div class="body3-content">
+            <div class="body-content">
+            <a href="rack1"><button class="btn">Rack1</button></a>
+            <a href="rack2"><button >Rack2</button></a>
+            <a href="rack3"><button >Rack3</button></a>
+            <a href="rack4"><button >Rack4</button></a>
+            <a href="rack5"><button >Rack5</button></a>
+            <a href="#"><button >Scan</button></a>
+        </div>
+        <div class="body1-content">
+            <div class="body2">
+                <button ><a href={% url 'add_box' %}>ADD BOX</a>
+                </button>
+            </div>
+            <div class="body3">
+                <table>
+                    <tr>
+                        <th>Sno.</th>
+                        <th>Boxes</th>
+                        <th>Items</th>
+                        <th></th>
+                    </tr> 
+                    {% comment %} {% for feature in features%}
+                    <tr>
+                        <td>{{feature.id}}</td>
+                        <td>{{feature.name}}</td>
+                        <td>{{feature.Qty}}</td>
+                        <td><a href="">OPEN</a></td>
+                    </tr>
+                    {%endfor%} {% endcomment %}
+                    {%block content%} {%endblock%}
+                    
+                </table>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+
+</html>

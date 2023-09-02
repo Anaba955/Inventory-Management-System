@@ -1,0 +1,71 @@
+/* signup.css */
+
+.main-content {
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.form-header h2 {
+  text-align: center;
+}
+
+.input-box {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-box i {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+}
+
+.input-box input {
+  width: 100%;
+  padding: 10px 40px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  text-align: center;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+p {
+  text-align: center;
+}
+
+p a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+/* CSS for first name and last name fields */
+.input-box:nth-child(5) {
+  margin-top: 20px;
+}
+
+.input-box:nth-child(6) {
+  margin-bottom: 20px;
+}
+
+/* Additional CSS styles */

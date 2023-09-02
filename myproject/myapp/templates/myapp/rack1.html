@@ -1,0 +1,15 @@
+{%extends "myapp/base.html"%}
+{%block content%}
+    {% for feature in features %}
+        {% comment %} {%if feature.rack_id == 1 %} {% endcomment %}
+            <tr>
+                <td>{{feature.id}}</td>
+                <td>{{feature.name}}</td>
+                <td>{{feature.Qty}}</td>
+                <td><a href="scanner">OPEN</a></td>
+            </tr>
+        {% comment %} {%endif%} {% endcomment %}
+    {%endfor%} 
+{%endblock%}
+
+

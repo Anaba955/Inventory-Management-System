@@ -1,0 +1,24 @@
+{% load static %}
+
+<DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invento Track</title>
+    <link rel="stylesheet" href="{%static 'myapp/home.css'%}">
+</head>
+<body>
+    <div class="main-content">
+        <div class="butn-content">
+            <a href="{%url 'signup'%}"><button class="btn">SignUp</button></a>
+            <a href="{%url 'login1'%}"><button class="btn">SignIn</button></a>
+        </div>
+        <div class="body1-content">
+            <h1><span>I</span>vento <span>T</span>rack</h1>
+            {% comment %} <a href="{%url 'url'%}">Link</a> {% endcomment %}
+        </div>
+    </div>
+</body>
+</html>
