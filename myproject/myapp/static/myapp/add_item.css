@@ -1,0 +1,119 @@
+
+
+
+form.form{
+    width:90%;
+    max-width:470px;
+    background: linear-gradient(135deg, #00feba, #5b548a);
+    color: #ffffff;
+    margin: 100px auto 0;
+    border-radius:20px;
+    padding: 40px 35px;
+    text-align: center;
+    background-color: #00feba;
+    
+        border: 5px solid red;
+        padding: 45px 35px;
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Apply styles to the form container */
+  .form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style the form labels */
+.form-container label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Style the form input fields */
+.form-container input[type="text"],
+.form-container input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Style the form submit button */
+.form-container button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Add hover effect to the form submit button */
+.form-container button[type="submit"]:hover {
+    background-color: #45a049;
+}
+ @media (max-width:700px){
+    .inner{
+        width: 50%;
+    }
+    form{
+        font-size: 1.5rem;
+    }
+    input{
+      font-size: 1rem;
+    border: 1px solid black;
+    padding: 1%;
+    width: 73%;
+    }
+    select{
+            font-size: 2.3rem;
+    width: 49%;
+    height: 11%;
+    border: 1px solid;
+    }
+}
+@media (max-width:450px){
+    .inner{
+        width: 70%;
+    }
+    form{
+        font-size: 3.5rem;
+    }
+    input{
+        font-size: 3.5rem;
+        border: 1px solid black;
+        padding: 1%;
+    }
+    select{
+        font-size: 5rem;
+        width: 49%;
+        height: 11%;
+        border: 1px solid;
+    }
+}
