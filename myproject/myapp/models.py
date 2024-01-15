@@ -1,8 +1,14 @@
+# from audioop import reverse
+from msilib.schema import File
+from django.urls import reverse
+from django.core.files.base import ContentFile
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save, post_delete
 from django.dispatch import receiver
+from .utils import qrc
+
 
 
 
@@ -20,9 +26,25 @@ class features(models.Model):
     name = models.CharField(max_length=30)
     Qty = models.DecimalField(decimal_places=2, max_digits=10)
     rack_id = models.ForeignKey(Racks, on_delete=models.CASCADE, default=1, to_field='Rid')
-    # qrcode = models.ImageField()
     last_modified = models.DateTimeField(default=timezone.now)
-    created_by = models.ForeignKey(User, default=1, on_delete=models.CASCADE)
+    created_by = models.ForeignKey(User, default=1, on_delete=models.CASCADE, related_name = 'myapp_features')
+    qr_code_image = models.ImageField(upload_to='qr_codes', blank=True)
+
+    def save(self, *args, **kwargs):
+        if self.id and not self.qr_code_image:
+            qr_url = reverse('box_click', args=[self.id])
+            img = qrc(qr_url)
+            img_content = ContentFile(img.read())
+            self.qr_code_image.save('feature_qr_codes/qr_code.png', img_content, save=False)
+
+        super().save(*args, **kwargs)
+
+            
+    def get_absolute_url(self):
+        return reverse('box_click', args=[self.id])
+
+
+    
 
     def __str__(self):
         return str(self.id)
@@ -30,7 +52,7 @@ class features(models.Model):
 
     
 class Items(models.Model):
-    id = models.IntegerField(primary_key=True)
+    id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=30)
     Qty = models.IntegerField(default=0)
     box_id = models.ForeignKey(features, on_delete=models.CASCADE, default = 8,to_field='id')
